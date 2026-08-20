@@ -1,0 +1,43 @@
+# Company dashcam video dataset - never publish (privacy + proprietary data)
+sample_videos/
+
+# Model weights - large binaries, not ours to redistribute
+Qwen3-VL-8B-Instruct/
+Qwen3-VL/
+*.pt
+*.safetensors
+*.bin
+
+# Fine-tuning checkpoints - trained on the company dataset above
+finetune_checkpoints/
+finetune_checkpoints_round2/
+finetune_checkpoints_vision/
+finetune_checkpoints_vision_round2/
+finetune/*_checkpoint/
+finetune/bvft_results/
+finetune/veh_results/
+
+# Data/logs/docs derived from real video content - not just code
+*.log
+flagged_videos.txt
+failed_videos.txt
+info_corrections/
+experiments/
+finetune/*.jsonl
+finetune/*cache*.json
+finetune/fix_both_progress.txt
+finetune/swap_backup_log*.txt
+finetune/swap_decisions*.txt
+
+# One-off debugging scripts with hardcoded dataset folder names
+finetune/quick_401d_caption_only.py
+finetune/quick_402_caption_only.py
+finetune/quick_402_test.py
+prompt_iteration_summary.md
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local tool/session state
+.claude/
